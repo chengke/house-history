@@ -4,17 +4,15 @@
 <link rel="stylesheet" src="dygraph.min.css" />
 </head>
 <body>
-<div id="graphdiv"></div>
+<div id="city_graph"></div>
+<div id="district_graph"></div>
+<div id="community_graph"></div>
+<div id="house_graph"></div>
 <script type="text/javascript">
-  g = new Dygraph(
-
-    // containing div
-    document.getElementById("graphdiv"),
-
-    // CSV or path to a CSV file.
-    "shanghai.cvs"
-
-  );
+  g = new Dygraph(document.getElementById("city_graph"), "shanghai.cvs");
+  h = new Dygraph(document.getElementById("district_graph"), "district.cvs");
+  i = new Dygraph(document.getElementById("community_graph"), "community.cvs");
+  j = new Dygraph(document.getElementById("house_graph"), "house.cvs");
 </script>
 </body>
 </html>
